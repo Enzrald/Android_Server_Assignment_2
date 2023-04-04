@@ -1,0 +1,49 @@
+<!DOCTYPE>
+<html>
+<head>
+  <title>Add</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="text-center">
+    <h1 class="text-center">SỬA</h1>
+    <hr><br>
+    <form method="post">
+      <div class="row">
+        <span class="col-lg-2"></span>
+        <label class="col-lg-2">Tên sản phẩm: </label>
+        <input class="col-lg-4" required type="text" id="ten" name="ten"  value="{{data.ten}}">
+      </div><br>
+
+      <div class="row">
+        <span class="col-lg-2"></span>
+        <label class="col-lg-2">Đơn giá: </label>
+        <input class="col-lg-4" required type="number" id="gia" name="gia"  value="{{data.gia}}">
+      </div><br>
+
+      <div class="row">
+        <span class="col-lg-2"></span>
+        <label class="col-lg-2">Số Lượng </label>
+        <input class="col-lg-4" required type="number" id="soluong" name="soluong" value="{{data.soluong}}">
+      </div><br>
+      <div class="row">
+        <span class="col-lg-2"></span>
+        <label class="col-lg-2">Loại Sản Phẩm </label>
+        <input class="col-lg-4" required type="text" id="loaiSP" name="loaiSP" value="{{data.loaiSP}}">
+      </div><br>
+      <div class="row">
+        <span class="col-lg-2"></span>
+        <label class="col-lg-2">Khuyến Mãi </label>
+        <input class="col-lg-4" required type="number" id="khuyenmai" name="khuyenmai" value="{{data.khuyenmai}}">
+      </div><br>
+    <br>
+      <div class="text-center">
+      <button type="submit" class="btn btn-primary">Update</button>
+      </div>
+
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE>
+<html>
+<head>
+  <title>Products</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div>
+    <div class="text-center jumbotron">
+      <h1>SẢN PHẨM</h1>       
+    </div>
+  <form class="text-center" method="get" action="/add">
+    <button class="btn btn-info" type="submit">Thêm sản phẩm</button>
+  </form>
+  <br>
+  <h2>Danh sách sản phẩm</h2> <br>
+  <table class="table table-strip">
+    <thead>
+      <tr>
+        <th>Tên </th>
+        <th>Đơn giá</th>
+        <th>Số Lượng</th>
+        <th>Loại Sản Phẩm</th>
+        <th>Khuyến mãi</th>
+        <th>Chức năng</th>
+      </tr>
+    </thead>
+
+    <tbody>
+       {{#each data}}
+      <tr>
+        <td>{{this.ten}}</td>
+        <td>{{this.gia}}</td>
+        <td>{{this.soluong}}</td>
+        <td>{{this.loaiSP}}</td>
+        <td>{{this.khuyenmai}}</td>
+       <td>
+          <form action="/edit/{{this._id}}" method="get">
+            <button class="btn btn-warning" type="submit">Edit</button>
+          </form>
+          <form action="/delete/{{this._id}}" onclick="return confirm('Bạn có chắc chắn muốn xóa ?')" method="post">
+            <button class="btn btn-danger" type="submit">Delete</button>
+          </form>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+
+  </table>
+</div>
+
+</body>
+</html>
